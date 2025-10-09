@@ -1,25 +1,23 @@
 
 # Laporan Praktikum Minggu [X]
-Topik: [Tuliskan judul topik, misalnya "Arsitektur Sistem Operasi dan Kernel"]
+Topik: [Mengenal, memahami, dan mengidentifikasi Microkernel, monolitik, hybird kernel , dan linux]
 
 ---
 
 ## Identitas
-- **Nama**  : [Nama Mahasiswa]  
-- **NIM**   : [NIM Mahasiswa]  
-- **Kelas** : [Kelas]
+- **Nama**  : [M.Habibi Nur Ramadhan]  
+- **NIM**   : [250202949]  
+- **Kelas** : [1 IKRB]
 
 ---
 
 ## Tujuan
-Tuliskan tujuan praktikum minggu ini.  
-Contoh:  
-> Mahasiswa mampu menjelaskan fungsi utama sistem operasi dan peran kernel serta system call.
+Tujuan pembelajaran pada minggu ini mahasiswa mampu mengidentifikasi microkernel, monolitik, hybird kernel, dan cara mengoperasikan linux pada perangkat.
 
 ---
 
 ## Dasar Teori
-Tuliskan ringkasan teori (3–5 poin) yang mendasari percobaan.
+Banyak komponen pada komputer yang bisa kita lihat komponen tersebut biasanya di sebut dengan hardware, tetapi ada juga sebuah komponen yang yang sangat berperan penting dalam sistem operasi pada komputer , yaitu kernel. Komponen ini tak kasat mata tapi sangat berperan penting dalam pengoperasian sistem pada komputer. Di dalam sistem kernel ini memungkinkan proses sebuah file ataupun aplikasi ini bisa berjalan.
 
 ---
 
