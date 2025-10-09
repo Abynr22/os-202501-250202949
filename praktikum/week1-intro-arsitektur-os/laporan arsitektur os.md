@@ -17,15 +17,55 @@ Tujuan pembelajaran pada minggu ini mahasiswa mampu mengidentifikasi microkernel
 ---
 
 ## Dasar Teori
-Banyak komponen pada komputer yang bisa kita lihat komponen tersebut biasanya di sebut dengan hardware, tetapi ada juga sebuah komponen yang yang sangat berperan penting dalam sistem operasi pada komputer , yaitu kernel. Komponen ini tak kasat mata tapi sangat berperan penting dalam pengoperasian sistem pada komputer. Di dalam sistem kernel ini memungkinkan proses sebuah file ataupun aplikasi ini bisa berjalan.
+Jadi sistem operasi atau (OS) adalah sebuah konsep awal yang perlu di pelajari untuk mahasiswa ilmu komputer di mana sistem operasi adalah sebuah perangkat lunak yang menghubungkan antara user dan perangkat keras, mengelola seluruh sumber daya komputer. Ada beberapa point yang akan di pelajari untuk mengenal konsep awal pada komputer:
+* Model sebuah arsitektur OS seperti **monolithic kernel, microkernel , hybird kernel dan layered approach**
+* Mekanisme dari **system call**
+* Mode eksekusi **kernel mode** dan **user mode**
+* 
 
 ---
 
 ## Langkah Praktikum
-1. Langkah-langkah yang dilakukan.  
-2. Perintah yang dijalankan.  
-3. File dan kode yang dibuat.  
-4. Commit message yang digunakan.
+1. **Setup Environment**
+   - Pastikan Linux (Ubuntu/WSL) sudah terinstal.
+   - Pastikan Git sudah dikonfigurasi dengan benar:
+     ```bash
+     git config --global user.name "Nama Anda"
+     git config --global user.email "email@contoh.com"
+     ```
+
+2. **Diskusi Konsep**
+   - Baca materi pengantar tentang komponen OS.
+   - Identifikasi komponen yang ada pada Linux/Windows/Android.
+
+3. **Eksperimen Dasar**
+   Jalankan perintah berikut di terminal:
+   ```bash
+   uname -a
+   whoami
+   lsmod | head
+   dmesg | head
+   ```
+   Catat dan analisis modul kernel yang tampil.
+
+4. **Membuat Diagram Arsitektur**
+   - Buat diagram hubungan antara *User → System Call → Kernel → Hardware.*
+   - Gunakan **draw.io** atau **Mermaid**.
+   - Simpan hasilnya di:
+     ```
+     praktikum/week1-intro-arsitektur-os/screenshots/diagram-os.png
+     ```
+
+5. **Penulisan Laporan**
+   - Tuliskan hasil pengamatan, analisis, dan kesimpulan ke dalam `laporan.md`.
+   - Tambahkan screenshot hasil terminal ke folder `screenshots/`.
+
+6. **Commit & Push**
+   ```bash
+   git add .
+   git commit -m "Minggu 1 - Arsitektur Sistem Operasi dan Kernel"
+   git push origin main
+   ```
 
 ---
 
@@ -70,7 +110,7 @@ Tuliskan 2–3 poin kesimpulan dari praktikum ini.
 ## Refleksi Diri
 Tuliskan secara singkat:
 - Apa bagian yang paling menantang minggu ini? **semua bagian dari minggu ini menantang karena baru mempelajari basic pada komputer, mulai dari memperkenalkan bagian-bagian komputer sampai dengan pengoperasian aplikasi seperti vscode, git bash, github , draw.io dan lain-lain.**
-- Bagaimana cara Anda mengatasinya? **Saya mempelajari ini secara otodidak dan dengan bantuan teman.**
+- Bagaimana cara Anda mengatasinya? **Saya mempelajari ini secara otodidak dan dengan berdiskusi dengan teman.**
 
 ---
 
