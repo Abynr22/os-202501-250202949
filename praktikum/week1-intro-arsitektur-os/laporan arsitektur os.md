@@ -1,13 +1,13 @@
 
-# Laporan Praktikum Minggu [X]
-Topik: [Mengenal, memahami, dan mengidentifikasi Microkernel, monolitik, hybird kernel , dan linux]
+# Laporan Praktikum Minggu [1]
+Topik: "Laporan Arsitektur OS"
 
 ---
 
 ## Identitas
-- **Nama**  : [M.Habibi Nur Ramadhan]  
-- **NIM**   : [250202949]  
-- **Kelas** : [1 IKRB]
+- **Nama**  : M. Habibi Nur Ramadhan
+- **NIM**   : 250202949
+- **Kelas** : 1IKRB
 
 ---
 
@@ -69,8 +69,8 @@ Tuliskan 2–3 poin kesimpulan dari praktikum ini.
 
 ## Refleksi Diri
 Tuliskan secara singkat:
-- Apa bagian yang paling menantang minggu ini?  
-- Bagaimana cara Anda mengatasinya?  
+- Apa bagian yang paling menantang minggu ini? **semua bagian dari minggu ini menantang karena baru mempelajari basic pada komputer, mulai dari memperkenalkan bagian-bagian komputer sampai dengan pengoperasian aplikasi seperti vscode, git bash, github , draw.io dan lain-lain.**
+- Bagaimana cara Anda mengatasinya? **Saya mempelajari ini secara otodidak dan dengan bantuan teman.**
 
 ---
 
