@@ -98,11 +98,11 @@ Tuliskan 2–3 poin kesimpulan dari praktikum ini.
 ---
 
 ## Quiz
-1. [Pertanyaan 1]  
+1. Sebutkan tiga fungsi utama sistem operasi. 
    **Jawaban:**  
-2. [Pertanyaan 2]  
+2. Jelaskan perbedaan antara kernel mode dan user mode.
    **Jawaban:**  
-3. [Pertanyaan 3]  
+3. Sebutkan contoh OS dengan arsitektur monolithic dan microkernel.
    **Jawaban:**  
 
 ---
