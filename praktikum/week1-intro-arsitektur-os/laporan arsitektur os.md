@@ -12,7 +12,7 @@ Topik: "Laporan Arsitektur OS"
 ---
 
 ## Tujuan
-Tujuan pembelajaran pada minggu ini mahasiswa mampu mengidentifikasi microkernel, monolitik, hybird kernel, dan cara mengoperasikan linux pada perangkat.
+> Mahasiswa mampu menjelaskan fungsi utama sistem operasi dan peran kernel serta system call.
 
 ---
 
@@ -21,7 +21,7 @@ Jadi sistem operasi atau (OS) adalah sebuah konsep awal yang perlu di pelajari u
 * Model sebuah arsitektur OS seperti **monolithic kernel, microkernel , hybird kernel dan layered approach**
 * Mekanisme dari **system call**
 * Mode eksekusi **kernel mode** dan **user mode**
-* 
+  
 
 ---
 
@@ -72,7 +72,7 @@ Jadi sistem operasi atau (OS) adalah sebuah konsep awal yang perlu di pelajari u
 ## Kode / Perintah
 Tuliskan potongan kode atau perintah utama:
 ```bash
-git config --global.user "Nama"
+git config --global.user "nama"
 ```
 ```bash
 git config --global.email "email@"
@@ -111,20 +111,48 @@ Sertakan screenshot hasil percobaan atau diagram:
 - Hubungkan hasil dengan teori (fungsi kernel, system call, arsitektur OS).  
 - Apa perbedaan hasil di lingkungan OS berbeda (Linux vs Windows)?  
 
+### 1.Analisis kode perintah
+pada git :
+- **`git config --global user.name "nama"`** Untuk mengatur informasi identitas pengguna git secara global.
+- **`git config --global user.email "email"`** Mencantukan email pada setiap commit.
+- **`git add .`** Menambahkan perubahan file ke staging area sebelum di commit ke repository.
+- **`git commit -m `** Memberikan commit (pesan yang akan di kirim) ke repository.
+- **`git push -u origin main`** menambahkan file ke repository.
+
+pada linux:
+- **`uname -a`** Mengidentifikasi versi kernel linux yang digunakan, Linux cs-695217410923-default 6.6.105+.
+- **`whoami`** Menampilkan nama pengguna yaitu : habibinurramadhan123
+- **`lsmod | head`**  Menampilkan daftar modul kernel yang sedang di muat di sistem linux.
+- **`dmesg | head`**  Digunakan untuk menampilkan pesan kernel biasanya berisi informasi  saat booting, deteksi perangkat keras, error driver atau modul kernel, dan informasi perangkat baru yang dicolokkan.
+### 2.Analisis Arsitektur OS
+- Bisa kita lihat bahwa kernel memiliki hak akses pada usermode dan kernel mode , hak akses pada mode kernel meliputi hak akses yang tidak terbatas , maka diperlukan dua mode untuk masalah keamanan , stabilitas , dan kontrol sistem.
+- Disini system call berfungsi memjembatani antara pengguna terhadap akses ke aplikasi.
+- Jadi arsitektur OS ini bekerja sama dalam mengelola sumber daya komputer.
+### 3.Analisis lingkungan os berbeda antara Linux dan windows
+**Linux** ini sangat fleksiblel dan dapat di modifikasi sesuai kebutuhan, mendukung scripting pada (bash,shell) untuk otomatisasi, linux lebih cocok untuk pengembangan dan pengguna teknis.
+sedangkan **windows** Fokus kepada kemudahan pengguna, cocok untuk pengguna umum, bisnis dan gaming. lebih mudah di operasikan tanpa banyak perintah teknis.
+
 ---
 
 ## Kesimpulan
-Tuliskan 2–3 poin kesimpulan dari praktikum ini.
+* Bisa disimpulkan bahwa arsitektur OS merupakan kerangka dasar dalam komputer untuk mengatur hubungan antara hardware, kernel, dan system call dan aplikasi. Arsitektur ini bertujuan untuk menjalankan fungsi utamanya yaiu mengelola sumber daya komputer (CPU, Memori, Perangkat I/O dan file).
+* Perintah Linux berfungsi untuk memberi instruksi langsung kepada sistem operasi agar melakukan tugas tertentu. Melalui command line (terminal), contoh perintah : `uname -a` `whoami` `lsmod | head` `dmesg | head`
 
 ---
 
 ## Quiz
-1. Sebutkan tiga fungsi utama sistem operasi. 
-   **Jawaban:**  
+1. Sebutkan tiga fungsi utama sistem operasi.
+   **Jawaban:**
+     Fungsi sistem operasi di antaranya yaitu sebagai manajemen perangakat keras, manajemen file & penyimpanan , serta menghubungkan user dengan perangkat.
 2. Jelaskan perbedaan antara kernel mode dan user mode.
-   **Jawaban:**  
+   **Jawaban:**
+     Usermode atau *mode pengguna*  dan Kernel mode atau *mode kernel*  merupakan tingkatan dalam mengakses sistem inti (kernel) dari aplikasi yang dijalankan pengguna. Pada **usermode** hak akses terbatas ke sumber daya sistem , seperti memori dan perangkat keras. Sedangkan **Kernel mode** memberikan hak akses penuh ke sumberdaya sistem. 
 3. Sebutkan contoh OS dengan arsitektur monolithic dan microkernel.
-   **Jawaban:**  
+   **Jawaban:**
+    * Contoh arsitektur os dari monolithic: Linux, MS-DOS , BSD , Solaris , dan windows
+    * contoh arsitektur os Microkernel: QNX, MINIX, GNU Hurd, L4 microkernel family, dan zicron
+   
+   
 
 ---
 
