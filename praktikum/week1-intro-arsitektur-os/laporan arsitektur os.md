@@ -72,16 +72,37 @@ Jadi sistem operasi atau (OS) adalah sebuah konsep awal yang perlu di pelajari u
 ## Kode / Perintah
 Tuliskan potongan kode atau perintah utama:
 ```bash
+git config --global.user "Nama"
+```
+```bash
+git config --global.email "email@"
+```
+```bash
+git add .
+```
+```bash
+git commit -m "Title"
+```
+```bash
+git push -u origin main
+```
+```bash
 uname -a
+```
+```bash
+whoami
+```
+```bash
 lsmod | head
+```
+```bash
 dmesg | head
 ```
-
 ---
 
 ## Hasil Eksekusi
 Sertakan screenshot hasil percobaan atau diagram:
-![Screenshot hasil](screenshots/example.png)
+![Screenshot hasil](screenshots/linux-week-1.png)
 
 ---
 
