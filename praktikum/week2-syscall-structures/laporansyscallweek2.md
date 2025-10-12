@@ -219,7 +219,9 @@ habibinurramadhan123@cloudshell:~$ sudo dmesg | tail -n 10
 
 ## Hasil Eksekusi
 Sertakan screenshot hasil percobaan atau diagram:
-![Screenshot hasil](screenshots/example.png)
+![Screenshot hasil](screenshots/screenshotcodeweek2.png)
+
+![Screenshot hasil](screenshots/DiagramSystemCallWEEK2.png)
 
 ---
 
