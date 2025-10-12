@@ -22,7 +22,7 @@ Menggunakan perintah Linux untuk menampilkan dan menganalisis system call.
 ---
 
 ## Dasar Teori
-Tuliskan ringkasan teori (3–5 poin) yang mendasari percobaan.
+System call termasuk salah satu komponen kernel pada OS yang memiliki berbagai fungsi di antaranya untuk mengakses perangkat keras , mengelola proses, mengatur memori, mengatur komunikasi antar proses, dan menangani file dan direktori contohnya membuka, menutup, membuat dan menghapus file.
 
 ---
 
@@ -221,7 +221,7 @@ habibinurramadhan123@cloudshell:~$ sudo dmesg | tail -n 10
 Sertakan screenshot hasil percobaan atau diagram:
 ![Screenshot hasil](screenshots/screenshotcodeweek2.png)
 
-![Screenshot hasil](screenshots/DiagramSystemCallWEEK2.png)
+![Screenshot hasil](screenshots/Diagram-System-Call-WEEK-2.png)
 
 ---
 
@@ -231,23 +231,28 @@ Sertakan screenshot hasil percobaan atau diagram:
 ---
 
 ## Kesimpulan
-Tuliskan 2–3 poin kesimpulan dari praktikum ini.
-
+* Pada kesimpulannya system call merupakan pintu masuk dari user program ke kernel OS dan merupakan salah satu komponen dari kernel.
+* **strace ls , strace -e trace=open,read,write,close cat /etc/passwd, dan dmesg | tail -n 10** merupakan perintah  untuk memantau, menganalisis, dan memahami hubungan antara usermode dan kernel mode baik dari sisi system call maupun pesan sistem kernel.
+  
 ---
 
 ## Quiz
 1. Apa fungsi utama system call dalam sistem operasi?
-   **Jawaban:**  
+   **Jawaban:**  System call itu berperan menjembatani antara program aplikasi dan OS dan memiliki beberapa fungsi utama untuk mengakses perangkat keras , mengelola proses, mengatur memori, mengatur komunikasi antar proses, serta mengatur file direktori.
 2. Sebutkan 4 kategori system call yang umum digunakan.
-   **Jawaban:**  
+   **Jawaban:**
+   * **Pengendalian Proses (Process control)** dalam hal ini syscall mengatur proses program yang sedang berjalan seperti membuat, menjalankan, menghentikan, menunggu dan mendapatkan id proses.
+   * **File management** dalam hal ini syscall digunakan untuk mengelola file dan direktori contohnya membuka, membaca, menulis, menutup, dan menghapus file.
+   * **Device management** dalam hal ini syscall memiliki fungsi untuk berkomunikasi dengan input/output (I/O) contohnya mengatur kontrol, mengirim atau menerima data, dan meminta atau melepaskan perangkat.
+   * **Information maintenance & communication** ini berfungsi untuk mendapatkan atau mengatur informasi sistem dan untuk kounikasi antar proces (IPC)
 3. Mengapa system call tidak bisa dipanggil langsung oleh user program?
-   **Jawaban:**  
+   **Jawaban:**  Karena hanya kernel yang memiliki hak untuk mengakses perangkat keras , lebih detail nya system call berhubungan langsung dengan hardware dan sumber daya penting sistem, klo program pengguna bisa mengakses itu semua maka bisa berakibat pada kerusakan sistem atau crash, keamanan terganggu, dan membuat sistem tidak stabil.
 
 ---
 
 ## Refleksi Diri
 Tuliskan secara singkat:
-- Apa bagian yang paling menantang minggu ini? Hal yang menantang pada minggu ini itu dalam 
+- Apa bagian yang paling menantang minggu ini? Hal yang menantang pada minggu ini itu dalam mengoperasikan linux , dan dalam memahami materi yang cukup asing di kepala saya.
 - Bagaimana cara Anda mengatasinya?  Intinya saya terus belajar dan harus mengorbankan waktu saya untuk memahami materi ini
 
 ---
