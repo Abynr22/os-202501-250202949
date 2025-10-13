@@ -1,4 +1,3 @@
-
 # Laporan Praktikum Minggu [2]
 Topik: Struktur System Call dan Fungsi Kernel
 
@@ -226,6 +225,14 @@ Sertakan screenshot hasil percobaan atau diagram:
 ---
 
 ## Analisis
+Tulis analisis 400–500 kata tentang:
+Mengapa system call penting untuk keamanan OS?
+Bagaimana OS memastikan transisi user–kernel berjalan aman?
+Sebutkan contoh system call yang sering digunakan di Linux.
+
+### 1. Mengapa system call penting untuk keamanan OS
+Seperti yang kita ketahui bahwa system call itu berfungsi sebagai antar muka antara program pengguna  dan kernel OS, jika tidak ada system call tidak ada batasan akses pada usermode dan Kernel mode hal ini bisa berakibat kerusakan pada sistem atau crash. jadi system call ini sangat penting untuk keamanan pada sistem , selain itu system call juga berperan penting , di antaranya menjembatani program dan OS system call menyediakan metode standar bagi program aplikasi untuk meminta layanan dari OS contohnya membaca atau menulis file , membuat proses baru , ataupun melakukan operasi jaringan. Dan berperan untuk **manajemen sumber daya** system call disini berperan menempatkan dan melepaskan sumber daya sistem seperti contohnya CPU, memori, dan perangkat I/O. Juga pada unsur keamanan dan stabilitas , multitasking, interaksi perangkat keras, penanganan kesalahan, serta portabilitas
+
 
 
 ---
