@@ -253,7 +253,7 @@ contoh system call dari linux adalah open, close, read, write, fork, exec, exit,
 ### Tabel Analisis
 | No | Perintah | Fungsi Perintah | Output | Analisis|
 |----|-----------|----------------|------------------|------------------|
-| 1 | strace ls | Melacak semua system call yang dijalankan oleh perintah ls. | openat(AT_FDCWD, "/etc/ld.so.cache", O_RDONLY|O_CLOEXEC) = 3 | Terlihat bahwa ls memanggil system call openat untuk membuka direktori dan membaca isinya. |
+| 1 | strace ls | Melacak semua system call yang dijalankan oleh perintah ls. | openat(AT_FDCWD, "/etc/ld.so.cache", O_RDONLYO_CLOEXEC) = 3 | Terlihat bahwa ls memanggil system call openat untuk membuka direktori dan membaca isinya. |
 | 2 | strace -e trace=open,read,write,close cat /etc/passwd | untuk memfilter system call yang ingin di lacak. | read(3, "\177ELF\2\1\1\3\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\220\243\2\0\0\0\0\0 | bisa melihat file apa saja yang dibuka cat. |
 | 3 | dmesg tail | Menampilkan pesan dari kernel pada saat sistem berjalan. | [ 4067.875372] sd 0:0:2:0: [sdb] Mode Sense: 1f 00 00 08 | Menunjukkan informasi kernel dan pesan inisialisasi sistem pada saat booting. |
   
