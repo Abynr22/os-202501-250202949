@@ -23,6 +23,7 @@ Menggunakan perintah Linux untuk menampilkan dan menganalisis system call.
 ## Dasar Teori
 System call termasuk salah satu komponen kernel pada OS yang memiliki berbagai fungsi di antaranya untuk mengakses perangkat keras , mengelola proses, mengatur memori, mengatur komunikasi antar proses, dan menangani file dan direktori contohnya membuka, menutup, membuat dan menghapus file.
 
+
 ---
 
 ## Langkah Praktikum
@@ -236,8 +237,30 @@ Seperti yang kita ketahui bahwa system call itu berfungsi sebagai antar muka ant
 Dan dalam **Portabilitas:** Panggilan sistem memberikan antarmuka yang standar dan portabel. Ini berarti program yang ditulis untuk menggunakan panggilan sistem dapat berjalan pada sistem operasi yang berbeda tanpa modifikasi besar, bahkan jika arsitektur perangkat kerasnya berbeda.
 
 ### 2.Bagaimana OS memastikan transisi user–kernel berjalan aman?
-OS memastikan dalam mentrasisikan kedua mode ini antara usermode dan kernel mode menggunakan system call untuk mengontrol perpindahan ini, saat aplikasi user di klik ini akan memicu panggilan sistem, OS langsung beralih ke mode kernel, memproses, dan kembali lagi mode user setelah selesai memproses, sehingga ini dapat mencegah akses ke komponen system penting. Mekanisme keamanan Pada OS meliputi Pemisahan mode antara kernel mode dan user mode, panggilan sistem, Manajemen akses izin, perlindungan memori, Isolasi dan kompertementalisasi , pemeriksaan dan verifikasi. pemisahan antara dua mode user-kernel ini dibatasi untuk pengaksesan sumberdaya secara langsung pada user mode, sedangkan untuk kernel mode ini memiliki akses penuh kepada OS untuk mengelola perangkat keras, memori dan proses lainnya. Transisi
+OS memastikan dalam mentrasisikan kedua mode ini antara usermode dan kernel mode menggunakan system call untuk mengontrol perpindahan ini, saat aplikasi user di klik ini akan memicu panggilan sistem, OS langsung beralih ke mode kernel, memproses, dan kembali lagi mode user setelah selesai memproses, sehingga ini dapat mencegah akses ke komponen system penting. Mekanisme keamanan Pada OS meliputi Pemisahan mode antara kernel mode dan user mode, panggilan sistem, Manajemen akses izin, perlindungan memori, Isolasi dan kompertementalisasi , pemeriksaan dan verifikasi. pemisahan antara dua mode user-kernel ini dibatasi untuk pengaksesan sumberdaya secara langsung pada user mode, sedangkan untuk kernel mode ini memiliki akses penuh kepada OS untuk mengelola perangkat keras, memori dan proses lainnya. Transisi mode user-kernel hanya dapat terjadi melalui panggilan system, yang merupakan antar muka yang terstruktur dari OS. Dalam manajemen akses dan izin OS dapat mengontrol siapa yang dapat mengakses sumber daya sistem dan menjalankan sebuah proses tertentu berdasarkan izin pengguna dan kebijakan keamanan dari kernel. Dalam perlindungan memori melindungi memori kernel dari akses yang kurang sah oleh aplikasi user. ini termasuk mekanisme seperti penghalang memori, agar dapat menghindari kebocoran data. Isolasi dan kompertementalisasi pada beberapa system menggunakan mekanisme safebox  untuk menjalankan operasi dari kernel yang kritis di lingkungan yang terisolasi. Dan dalam Pemeriksaan & verifikasi sebelum menjalankan permintaan dari user mode, OS akan memeriksa keamanan dan memastikan permintaan tersebut sah.
 
+### 3.contoh system call yang sering digunakan di Linux.
+contoh system call dari linux adalah open, close, read, write, fork, exec, exit, stat, istat, fstat, dan kill
+* `open` membuka atau mebuat file
+* `write` menulis data ke sebuah file descriptor.
+* `read` membaca data dari sebuah file descriptor.
+* `close` menutup file descriptor yang sebelum nya dibuka.
+* `fork` membuat proses baru hasil duplikat proses saat ini.
+* `exit` mengakhiri proses.
+* `exec` mengganti proses.
+* `stat, istat, fstat` mendapatkan informasi rinci sebuah file.
+* `kill` mengirim sinyal ke sebuah proses.
+### Tabel Analisis
+| No | Perintah | Fungsi Perintah | Output | Analisis|
+|----|-----------|----------------|------------------|------------------|
+| 1 | strace ls | Melacak semua system call yang dijalankan oleh perintah ls. | openat(AT_FDCWD, "/etc/ld.so.cache", O_RDONLY|O_CLOEXEC) = 3 | Terlihat bahwa ls memanggil system call openat untuk membuka direktori dan membaca isinya. |
+| 2 | strace -e trace=open,read,write,close cat /etc/passwd | untuk memfilter system call yang ingin di lacak. | read(3, "\177ELF\2\1\1\3\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\220\243\2\0\0\0\0\0 | bisa melihat file apa saja yang dibuka cat. |
+| 3 | dmesg | tail | Menampilkan pesan dari kernel pada saat sistem berjalan. | [ 4067.875372] sd 0:0:2:0: [sdb] Mode Sense: 1f 00 00 08 | Menunjukkan informasi kernel dan pesan inisialisasi sistem pada saat booting. |
+  
+Sumber:
+* https://www.techtarget.com/searchsoftwarequality/tip/User-mode-vs-kernel-mode-OSes-explained#:~:text=Mode%20kernel%20berfungsi%20untuk%20mencegah,kesalahan%20terjadi%20dalam%20mode%20kernel.&text=Komputer%20memisahkan%20OS%20menjadi%20dua,sumber%20daya%20dan%20tujuan%20keamanan.
+* https://www.scaler.com/topics/dual-mode-operation-in-os/
+* https://jumpcloud.com/it-index/what-is-an-os-kernel#:~:text=merusak%20program%20lainnya.-,Keamanan,komponen%2Dkomponen%20sistem%20yang%20penting.
 
 
 ---
