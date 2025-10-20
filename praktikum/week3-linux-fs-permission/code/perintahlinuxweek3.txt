@@ -1,0 +1,34 @@
+habibinurramadhan123@cloudshell:~$ ls
+README-cloudshell.txt  week3-linux-fs-permission
+habibinurramadhan123@cloudshell:~$ pwd
+/home/habibinurramadhan123
+habibinurramadhan123@cloudshell:~$ ls -l
+total 8
+-rwxr-xr-x 1 habibinurramadhan123 habibinurramadhan123  913 Oct 20 14:56 README-cloudshell.txt
+drwxrwxr-x 2 habibinurramadhan123 habibinurramadhan123 4096 Oct 20 12:39 week3-linux-fs-permission
+habibinurramadhan123@cloudshell:~$ cd /tmp
+habibinurramadhan123@cloudshell:/tmp$ ls -a
+.                     code-oss-vm-session-state.json                                  tmp             tmp.pTgRgc94FN              vscode-ipc-074717e7-727a-4e2f-bb3c-db8f5ac1ccf4.sock
+..                    gemini-ide-server-33279.json                                    tmp.07RQ2yU8SN  tmux-1000                   vscode-ipc-96271aec-3df7-40b5-970d-c350b26c0564.sock
+cloudcode-temp6SCNY2  gemini-ide-server-510.json                                      tmp.2FVYqf3Xc1  vscode-git-11b77605b2.sock  vscode-ipc-a8874abb-508e-42fc-9296-75fd7815a4d5.sock
+cloudcode-tempaCLz5p  minikube_delete_4cca5c746441a284b0ce8c38ebb2c8e692fb9067_0.log  tmp.8u4kG82CzJ  vscode-git-1984678a98.sock  vscode-ipc-ef58a60e-b574-489b-81fd-e04f7755d364.sock
+cloudcode-tempLAr7y9  node-compile-cache                                              tmp.lBtjsPLpMS  vscode-git-a3619d3c19.sock  vscode-skaffold-events-logs
+cloudcode-tempvDZbym  percobaan.txt                                                   tmp.OeDlleCmIU  vscode-git-ac68488f62.sock  vscode-typescript1000
+habibinurramadhan123@cloudshell:/tmp$ cat /etc/passwd | head -n 5
+root:x:0:0:root:/root:/bin/bash
+daemon:x:1:1:daemon:/usr/sbin:/usr/sbin/nologin
+bin:x:2:2:bin:/bin:/usr/sbin/nologin
+sys:x:3:3:sys:/dev:/usr/sbin/nologin
+sync:x:4:65534:sync:/bin:/bin/sync
+habibinurramadhan123@cloudshell:/tmp$ `echo "Hello <Habibi><250202949>" > percobaan.txt`
+habibinurramadhan123@cloudshell:/tmp$ ls -l percobaan.txt
+-rw-rw-r-- 1 habibinurramadhan123 habibinurramadhan123 26 Oct 20 14:58 percobaan.txt
+habibinurramadhan123@cloudshell:/tmp$ chmod 600 percobaan.txt
+habibinurramadhan123@cloudshell:/tmp$ ls -l percobaan.txt
+-rw------- 1 habibinurramadhan123 habibinurramadhan123 26 Oct 20 14:58 percobaan.txt
+habibinurramadhan123@cloudshell:/tmp$ sudo chown root percobaan.txt
+habibinurramadhan123@cloudshell:/tmp$ ls -l percobaan.txt
+-rw------- 1 root habibinurramadhan123 26 Oct 20 14:58 percobaan.txt
+habibinurramadhan123@cloudshell:/tmp$ sudo cat percobaan.txt
+Hello <Habibi><250202949>
+habibinurramadhan123@cloudshell:/tmp$ 
