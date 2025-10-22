@@ -118,7 +118,7 @@ pwd
 
 ## Hasil Eksekusi
 Sertakan screenshot hasil percobaan atau diagram:
-![Screenshot hasil](Screenshots\Screenshotlinuxweek3.png)
+![alt text](../week3-linux-fs-permission/screenshots/Screenshotlinuxweek3.png) 
 
 
 ---
