@@ -118,7 +118,7 @@ pwd
 
 ## Hasil Eksekusi
 Sertakan screenshot hasil percobaan atau diagram:
-![Screenshot hasil](Screenshot-linux-week3.png)
+![Screenshot hasil](Screenshots/Screenshotlinuxweek3.png)
 
 ---
  ### Hasil eksekusi Kode perintah,pwd , ls, ls -a, cd/tmp, ls -a.
