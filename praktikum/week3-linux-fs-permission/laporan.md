@@ -118,7 +118,12 @@ pwd
 
 ## Hasil Eksekusi
 Sertakan screenshot hasil percobaan atau diagram:
+<<<<<<< HEAD
 ![Screenshot hasil](Screenshots/Screenshotlinuxweek3.png)
+=======
+![alt text](../week3-linux-fs-permission/screenshots/Screenshotlinuxweek3.png) 
+
+>>>>>>> 5df1361ad498e4266b2ee4f53e6885e183dfbc7d
 
 ---
  ### Hasil eksekusi Kode perintah,pwd , ls, ls -a, cd/tmp, ls -a.
