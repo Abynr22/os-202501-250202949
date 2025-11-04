@@ -180,7 +180,7 @@ Sertakan screenshot hasil percobaan atau diagram:
 | 11. pstree -p  head -20 | menampilkan 20 baris pertama dari daftar proses sistem | systemd(1)-+-agetty(183)... |
 
 
-### Diagram pohon (`pstree`)
+### Diagram pohon (`pstree`) 
 ```bash
 systemd(1)-+-agetty(183)
            |-agetty(192)
