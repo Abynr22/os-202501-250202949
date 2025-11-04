@@ -1,0 +1,89 @@
+aby@Abioy:~$ whoami
+aby
+aby@Abioy:~$ id
+uid=1000(aby) gid=1000(aby) groups=1000(aby),4(adm),24(cdrom),27(sudo),30(dip),46(plugdev),100(users)
+aby@Abioy:~$ groups
+aby adm cdrom sudo dip plugdev users
+aby@Abioy:~$ su - praktikan
+Password:
+su: Authentication failure
+aby@Abioy:~$ sudo passwd praktikan
+New password:
+Retype new password:
+passwd: password updated successfully
+aby@Abioy:~$ ps aux | head -10
+USER         PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+root           1  0.4  0.6  21832 12624 ?        Ss   13:17   0:02 /sbin/init
+root           2  0.0  0.1   3072  1920 ?        Sl   13:17   0:00 /init
+root           7  0.0  0.0   3072  1792 ?        Sl   13:17   0:00 plan9 --control-socket 7 --log-level 4 --server-fd 8 --pipe-fd 10 --log-truncate
+root          49  0.1  1.0  66812 19584 ?        S<s  13:17   0:00 /usr/lib/systemd/systemd-journald
+root         105  0.0  0.3  25268  6656 ?        Ss   13:17   0:00 /usr/lib/systemd/systemd-udevd
+systemd+     114  0.0  0.6  21456 12544 ?        Ss   13:17   0:00 /usr/lib/systemd/systemd-resolved
+systemd+     115  0.0  0.4  91024  7680 ?        Ssl  13:17   0:00 /usr/lib/systemd/systemd-timesyncd
+root         153  0.0  0.1   4236  2560 ?        Ss   13:17   0:00 /usr/sbin/cron -f -P
+message+     154  0.0  0.2   9600  5120 ?        Ss   13:17   0:00 @dbus-daemon --system --address=systemd: --nofork --nopidfile --systemd-activation --syslog-only
+aby@Abioy:~$ top -n 1
+top - 13:26:26 up 9 min,  2 users,  load average: 0.00, 0.02, 0.01
+Tasks:  29 total,   1 running,  28 sleeping,   0 stopped,   0 zombie
+%Cpu(s):  0.0 us,  5.9 sy,  0.0 ni, 79.4 id, 14.7 wa,  0.0 hi,  0.0 si,  0.0 st
+MiB Mem :   1790.8 total,   1149.0 free,    345.6 used,    368.5 buff/cache
+MiB Swap:   1024.0 total,   1024.0 free,      0.0 used.   1445.2 avail Mem
+
+    PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+ COMMAND
+      1 root      20   0   21832  12624   9424 S   0.0   0.7   0:02.17 systemd
+      2 root      20   0    3072   1920   1792 S   0.0   0.1   0:00.05 init-systemd(Ub
+      7 root      20   0    3072   1792   1792 S   0.0   0.1   0:00.00 init
+     49 root      19  -1   66812  19584  18688 S   0.0   1.1   0:00.64 systemd-journal
+    105 root      20   0   25268   6656   4992 S   0.0   0.4   0:00.23 systemd-udevd
+    114 systemd+  20   0   21456  12544  10496 S   0.0   0.7   0:00.15 systemd-resolve
+    115 systemd+  20   0   91024   7680   6912 S   0.0   0.4   0:00.52 systemd-timesyn
+    153 root      20   0    4236   2560   2432 S   0.0   0.1   0:00.01 cron
+    154 message+  20   0    9600   5120   4480 S   0.0   0.3   0:00.13 dbus-daemon
+    166 root      20   0   18152   8448   7552 S   0.0   0.5   0:00.15 systemd-logind
+    172 root      20   0 1681852  12800  11008 S   0.0   0.7   0:00.40 wsl-pro-service
+    179 syslog    20   0  222508   5760   4480 S   0.0   0.3   0:00.20 rsyslogd
+    183 root      20   0    3160   1920   1792 S   0.0   0.1   0:00.02 agetty
+    190 root      20   0  107028  22648  13312 S   0.0   1.2   0:00.41 unattended-upgr
+    192 root      20   0    3116   1920   1792 S   0.0   0.1   0:00.02 agetty
+    281 root      20   0    3080    896    896 S   0.0   0.0   0:00.00 SessionLeader
+    282 root      20   0    3096   1152   1024 S   0.0   0.1   0:00.14 Relay(283)
+    283 aby       20   0    6072   5120   3456 S   0.0   0.3   0:00.07 bash
+    284 root      20   0    6820   4352   3712 S   0.0   0.2   0:00.04 login
+    331 aby       20   0   20296  11136   9088 S   0.0   0.6   0:00.21 systemd
+    332 aby       20   0   21152   3520   1792 S   0.0   0.2   0:00.00 (sd-pam)
+    356 aby       20   0    6072   4992   3456 S   0.0   0.3   0:00.03 bash
+    411 root      20   0    7256   4788   4096 S   0.0   0.3   0:00.08 su
+    414 praktik+  20   0   20120  10880   9088 S   0.0   0.6   0:00.20 systemd
+    415 praktik+  20   0   21156   3520   1792 S   0.0   0.2   0:00.00 (sd-pam)
+    434 praktik+  20   0    6072   5120   3456 S   0.0   0.3   0:00.13 bash
+aby@Abioy:~$ sleep 1000 &
+[1] 544
+aby@Abioy:~$ ps aux | grep sleep
+aby          544  0.0  0.0   3124  1664 pts/0    S    13:26   0:00 sleep 1000
+aby          546  0.0  0.1   4088  1920 pts/0    S+   13:26   0:00 grep --color=auto sleep
+aby@Abioy:~$ kill 544
+aby@Abioy:~$ kill 546
+-bash: kill: (546) - No such process
+[1]+  Terminated              sleep 1000
+aby@Abioy:~$ pstree -p | head -20
+systemd(1)-+-agetty(183)
+           |-agetty(192)
+           |-cron(153)
+           |-dbus-daemon(154)
+           |-init-systemd(Ub(2)-+-SessionLeader(281)---Relay(283)(282)---bash(283)---su(411)---bash(434)---su(509)---bash(510)-+-he+
+           |                    |                                                                                              `-ps+
+           |                    |-init(7)---{init}(8)
+           |                    |-login(284)---bash(356)
+           |                    `-{init-systemd(Ub}(9)
+           |-rsyslogd(179)-+-{rsyslogd}(196)
+           |               |-{rsyslogd}(197)
+           |               `-{rsyslogd}(198)
+           |-systemd(331)---(sd-pam)(332)
+           |-systemd(414)---(sd-pam)(415)
+           |-systemd-journal(49)
+           |-systemd-logind(166)
+           |-systemd-resolve(114)
+           |-systemd-timesyn(115)---{systemd-timesyn}(142)
+           |-systemd-udevd(105)
+           |-unattended-upgr(190)---{unattended-upgr}(237)
+aby@Abioy:~$
