@@ -110,14 +110,16 @@ Tuliskan potongan kode atau perintah utama:
    | P2 | 8 | 2 |
    | P3 | 6 | 3 |
    | P4 | 4 | 4 |
-Sertakan screenshot hasil percobaan atau diagram:
+
+Sertakan screenshot hasil percobaan atau diagram: 
+Proses pada skenario 1
 ![Screenshot hasil](screenshots/Hasileksekusiweek5.png)
 
 ### Hasil eksperiment - 1. FCFS (First Come First Served)
 FCFS eksekusi pada proses tidak dapat di ganggu , tidak dapat di trobos antriannya.
-![Screenshot hasil](screenshots/FCFSproseseksekusi.png)
 
- * **Gantt Chart FCFS:**
+
+ * **Gantt Chart FCFS SK1:**
   ```
    | P1 | P2 | P3 | P4 |
    0    4    12   18   22
@@ -134,13 +136,21 @@ FCFS eksekusi pada proses tidak dapat di ganggu , tidak dapat di trobos antriann
    | Total | | | | | 25 | 47 |
    | Average | | | | | 6,25 | 11,75 |
 
+### **FCFS SKENARIO 2**
+![Screenshot hasil](screenshots/fcfsscedulingskenario2.png)
+
+* **Gantt Chart FCFS SK2:**
+  ```
+   | P1 | P2 | P3 | P4 |
+   0    3    8    17    23
+   ```
+
 ### Hasil eksperiment - 2. SJF (Shortest Job First)
 Berbeda dengan FCFS , pada proses SJF memungkinkan proses yang memiliki waktu eksekusi paling cepat akan di utamakan.
 P1>P4>P3>P2.
 
-![Screenshot hasil](screenshots/SJFproseseksekusi.png)
 
-* **Gantt Chart FCFS:**
+* **Gantt Chart SJF SK1:**
   ```
    | P1 | P4 | P3 | P2 |
    0    4    8   14   22
@@ -156,12 +166,30 @@ P1>P4>P3>P2.
    | Total | | | | | 17 | 39 |
    | Average | | | | | 4,25 | 9,75 |
 
-## Eksperimen - 3 Perbandingan FCFS dan SJF
+   ### **SJF SKENARIO 2**
+![Screenshot hasil](screenshots/sjfscedulingskenario2.png)
 
+* **Gantt Chart SJF SK2:**
+  ```
+   | P1 | P2 | P4 | P3 |
+   0    3    8    14   23
+   ```
+
+## Eksperimen - 3 Perbandingan FCFS dan SJF
+PERBANDINGAN SK1
    | Algoritma | Avg Waiting Time | Avg Turnaround Time | Kelebihan | Kekurangan |
    | :--- | :--- | :--- | :--- | :--- |
    | FCFS | 6,25 | 11,75 | lebih sederhana | waktu tunggu yang rata rata lama |
    | SJF | 4,25 | 9,75	| waktu tunggu rata rata yang pendek dan performa nya optimal | kesulitan memprediksi waktu dan potensi |
+
+
+PERBANDINGAN SK2
+   | Algoritma | Avg Waiting Time | Avg Turnaround Time | Kelebihan | Kekurangan |
+   | :--- | :--- | :--- | :--- | :--- |
+   | FCFS | 4 | 9,75 | lebih sederhana | waktu tunggu yang rata rata lama |
+   | SJF | 3,25 | 9 | waktu tunggu rata rata yang pendek dan performa nya optimal | kesulitan memprediksi waktu dan potensi |
+
+
 
 
 ---
