@@ -176,6 +176,7 @@ Hasil perhitungan:
 
 ## Analisis
 
+
    | Algoritma | Jumlah Page Fault | Keterangan |
    |:--|:--:|:--|
    | FIFO | 10 | Lebih banyak page |
@@ -237,7 +238,7 @@ FIFO tidak menjaga page yang sering diakses tetap berada di memori.
 ## Refleksi Diri
 Tuliskan secara singkat:
 - Apa bagian yang paling menantang minggu ini?  Minggu ini cukup menantang karena kita mempelajari materi tentang manajement memori, dan harus bisa membedakan algoritma FIFO dan LRU yang kelihatan sama namun cukup berbeda.
-- Bagaimana cara Anda mengatasinya?  Mempelajari materi dengan baik.
+- Bagaimana cara Anda mengatasinya?  Mempelajari materi dengan baik. 
 
 ---
 
