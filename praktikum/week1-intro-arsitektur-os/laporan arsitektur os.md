@@ -9,10 +9,10 @@ Topik: "Laporan Arsitektur OS"
 - **NIM**   : 250202949
 - **Kelas** : 1IKRB
 
----
+--- 
 
 ## Tujuan
-> Mahasiswa mampu menjelaskan fungsi utama sistem operasi dan peran kernel serta system call.
+> Mahasiswa mampu menjelaskan fungsi utama sistem operasi dan peran kernel serta system call. 
 
 ---
 
@@ -130,13 +130,13 @@ pada linux:
 - Jadi arsitektur OS ini bekerja sama dalam mengelola sumber daya komputer.
 ### 3.Analisis lingkungan os berbeda antara Linux dan windows
 **Linux** ini sangat fleksiblel dan dapat di modifikasi sesuai kebutuhan, mendukung scripting pada (bash,shell) untuk otomatisasi, linux lebih cocok untuk pengembangan dan pengguna teknis.
-sedangkan **windows** Fokus kepada kemudahan pengguna, cocok untuk pengguna umum, bisnis dan gaming. lebih mudah di operasikan tanpa banyak perintah teknis.
+sedangkan **windows** Fokus kepada kemudahan pengguna, cocok untuk pengguna umum, bisnis dan gaming. lebih mudah di operasikan tanpa banyak perintah teknis. 
 
 ---
 
 ## Kesimpulan
 * Bisa disimpulkan bahwa arsitektur OS merupakan kerangka dasar dalam komputer untuk mengatur hubungan antara hardware, kernel, dan system call dan aplikasi. Arsitektur ini bertujuan untuk menjalankan fungsi utamanya yaiu mengelola sumber daya komputer (CPU, Memori, Perangkat I/O dan file).
-* Perintah Linux berfungsi untuk memberi instruksi langsung kepada sistem operasi agar melakukan tugas tertentu. Melalui command line (terminal), contoh perintah : `uname -a` `whoami` `lsmod | head` `dmesg | head`
+* Perintah Linux berfungsi untuk memberi instruksi langsung kepada sistem operasi agar melakukan tugas tertentu. Melalui command line (terminal), contoh perintah : `uname -a` `whoami` `lsmod | head` `dmesg | head`.
 
 ---
 
