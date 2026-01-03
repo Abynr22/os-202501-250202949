@@ -13,7 +13,7 @@ Topik: Manajemen File dan Permission di Linux
 
 ## Tujuan
 Tuliskan tujuan praktikum minggu ini.  
-Menggunakan perintah ls, pwd, cd, cat untuk navigasi file dan direktori.
+Menggunakan perintah ls, pwd, cd, cat untuk navigasi file dan direktori. 
 Menggunakan chmod dan chown untuk manajemen hak akses file.
 Menjelaskan hasil output dari perintah Linux dasar.
 Menyusun laporan praktikum dengan struktur yang benar.
