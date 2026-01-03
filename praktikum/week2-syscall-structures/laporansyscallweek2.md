@@ -11,7 +11,7 @@ Topik: Struktur System Call dan Fungsi Kernel
 ---
 
 ## Tujuan
-Setelah menyelesaikan tugas ini, mahasiswa mampu:
+Setelah menyelesaikan tugas ini, mahasiswa mampu: 
 
 Menjelaskan konsep dan fungsi system call dalam sistem operasi.
 Mengidentifikasi jenis-jenis system call dan fungsinya.
